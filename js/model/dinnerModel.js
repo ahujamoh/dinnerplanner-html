@@ -31,7 +31,13 @@ var DinnerModel = function() {
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
-		//TODO Lab 2
+		//TODO Lab 2: DONE partially, need to MERGE the ingredients
+		var _ingredients = new Array();
+		for(var key in  this.dishes){
+			var _new_ingredients = _ingredients.concat(this.dishes[key].ingredients);
+			_ingredients = _new_ingredients;
+		}
+		return _ingredients;
 
 	}
 
