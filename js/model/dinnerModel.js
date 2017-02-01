@@ -47,7 +47,7 @@ var DinnerModel = function() {
 		var _price = 0;
         var _ingredients = this.getAllIngredients();
         var _guests = this.getNumberOfGuests();
-		for (key in _ingredients){
+		for (var key in _ingredients){
 			_price = _price + _ingredients[key].price;
 		}
 		return _guests * _price;
@@ -65,7 +65,7 @@ var DinnerModel = function() {
 	this.removeDishFromMenu = function(id) {
 		//TODO Lab 2: DONE
 		// if same dish id exists multiple times, we remove all the occurences
-        for(key in this.dishes){
+        for(var key in this.dishes){
         	// splice an array : https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
             if(this.dishes[key].id == id) {
 				this.dishes.splice(key, 1);
@@ -97,7 +97,7 @@ var DinnerModel = function() {
 
 	//function that returns a dish of specific ID
 	this.getDish = function (id) {
-	  for(key in dishes){
+	  for(var key in dishes){
 			if(dishes[key].id == id) {
 				return dishes[key];
 			}
