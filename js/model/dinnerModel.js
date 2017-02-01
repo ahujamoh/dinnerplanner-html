@@ -25,13 +25,14 @@ var DinnerModel = function() {
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
-		//TODO Lab 2: Done
+		//TODO Lab 2: DONE
 		return this.dishes;
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
 		//TODO Lab 2
+
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
@@ -54,7 +55,7 @@ var DinnerModel = function() {
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
 	//if you don't pass any filter all the dishes will be returned
-	this.getAllDishes = function (type,filter) {
+	this.getAllDishes = function (type, filter) {
 	  return dishes.filter(function(dish) {
 		var found = true;
 		if(filter){
