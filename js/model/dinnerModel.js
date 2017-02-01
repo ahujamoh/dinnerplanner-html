@@ -56,15 +56,19 @@ var DinnerModel = function() {
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
-	this.addDishToMenu = function(id) {
-		//TODO Lab 2
-
+	this.addDishToMenu = function(dishToBeAdded) {
+		//TODO Lab 2: DONE
+		//remove all old occurrence
+		var _id = dishToBeAdded.id;
+		this.removeDishFromMenu(_id);
+		this.dishes.push(dishToBeAdded);
 	}
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
 		//TODO Lab 2: DONE
 		// if same dish id exists multiple times, we remove all the occurences
+		// if does not exist, would not do anything
         for(var key in this.dishes){
         	// splice an array : https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
             if(this.dishes[key].id == id) {
