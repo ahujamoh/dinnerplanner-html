@@ -61,7 +61,7 @@ var DinnerModel = function() {
 		//remove all old occurrence
 		var _id = dishToBeAdded.id;
 		this.removeDishFromMenu(_id);
-		this.dishes.push(dishToBeAdded);
+		this.dishes.splice(this.dishes.length, 0, dishToBeAdded);
 	}
 
 	//Removes dish from menu
