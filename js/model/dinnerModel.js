@@ -6,9 +6,15 @@ var DinnerModel = function() {
 	var num_of_guests = 0; //added variable to indicate number of guests
 	var selected_dishes = new Array();
 
+
+	this.testHello = function(){
+
+		return "Hello from mustafa";
+	}
+
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 2: DONE
-		this.num_of_guests= num;
+		num_of_guests= num;
 	}
 
 	// should return
@@ -26,15 +32,15 @@ var DinnerModel = function() {
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
 		//TODO Lab 2: DONE
-		return this.dishes;
+		return dishes;
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
 		//TODO Lab 2: DONE partially, need to MERGE the ingredients
 		var _ingredients = new Array();
-		for(var key in  this.dishes){
-			var _new_ingredients = _ingredients.concat(this.dishes[key].ingredients);
+		for(var key in  dishes){
+			var _new_ingredients = _ingredients.concat(dishes[key].ingredients);
 			_ingredients = _new_ingredients;
 		}
 		return _ingredients;
@@ -117,6 +123,8 @@ var DinnerModel = function() {
 	// defining the unit i.e. "g", "slices", "ml". Unit
 	// can sometimes be empty like in the example of eggs where
 	// you just say "5 eggs" and not "5 pieces of eggs" or anything else.
+
+
 	var dishes = [
 		{
 		'id':1,
